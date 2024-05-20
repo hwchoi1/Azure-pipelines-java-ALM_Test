@@ -9,8 +9,9 @@ trigger:
 pool: CHW_Personal_Computer
 
 steps:
-- task: Maven@4
+- task: Maven@3
   inputs:
+    mavenWrapper: true
     mavenPomFile: 'pom.xml'
     mavenOptions: '-Xmx3072m'
     javaHomeOption: 'JDKVersion'
